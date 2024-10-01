@@ -1,0 +1,12 @@
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "John",
+  "lastName": "Smith",
+  "address": "1000 N 4th St"
+}
+
+###
+GET http://localhost:8080/employees
