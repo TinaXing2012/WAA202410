@@ -1,0 +1,12 @@
+<students>
+    <student>
+        <firstname>John</firstname>
+        <lastname>Smith</lastname>
+        <age>20</age>
+    </student>
+    <student>
+        <firstname>Edward</firstname>
+        <lastname>Friday</lastname>
+        <age>22</age>
+    </student>
+</students>

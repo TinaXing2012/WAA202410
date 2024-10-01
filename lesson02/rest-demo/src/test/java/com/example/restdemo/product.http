@@ -1,0 +1,12 @@
+GET http://localhost:8080/products
+Accept: application/v2+json
+
+### Customer header
+GET http://localhost:8080/products
+MIU-VERSION: 2
+
+### URI Versioning
+GET http://localhost:8080/v2/products
+
+### Request Params
+GET http://localhost:8080/products?version=2
