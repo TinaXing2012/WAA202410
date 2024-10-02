@@ -2,9 +2,9 @@ POST http://localhost:8080/employees
 Content-Type: application/json
 
 {
-  "firstname": "John",
+  "firstname": "Edward",
   "lastname": "Smith",
-  "address": "1000 N 4th ST"
+  "address": "1001 N 4th ST"
 }
 
 ###
