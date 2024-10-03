@@ -1,0 +1,28 @@
+POST http://localhost:8080/customers
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "address": {
+    "street": "1000 N 4th St",
+    "city": "Fairfield"
+  },
+  "creditCards": [
+    {
+      "number": 11111
+    },
+    {
+      "number": 22222
+    },
+    {
+      "number": 33333
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/customers
+
+###
+DELETE http://localhost:8080/customers/1/creditcards/0
