@@ -21,4 +21,10 @@ public abstract class Account {
         this.number = number;
         this.balance = balance;
     }
+
+    public Account(long id, long number, double balance) {
+        this.id = id;
+        this.number = number;
+        this.balance = balance;
+    }
 }

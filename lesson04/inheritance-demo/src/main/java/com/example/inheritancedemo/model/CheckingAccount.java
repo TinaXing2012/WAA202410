@@ -18,4 +18,9 @@ public class CheckingAccount extends Account {
         super(number, balance);
         this.overdraftLimit = overdraftLimit;
     }
+
+    public CheckingAccount(long id, long number, double balance, double overdraftLimit) {
+        super(id, number, balance);
+        this.overdraftLimit = overdraftLimit;
+    }
 }

@@ -17,4 +17,9 @@ public class SavingsAccount extends Account {
         super(number, balance);
         this.APY = APY;
     }
+
+    public SavingsAccount(long id, long number, double balance, double APY) {
+        super(id, number, balance);
+        this.APY = APY;
+    }
 }
