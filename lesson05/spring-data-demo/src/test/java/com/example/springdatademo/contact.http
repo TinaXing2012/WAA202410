@@ -1,0 +1,14 @@
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Lily",
+  "lastName": "Smith",
+  "email": "lily.smith@miu.edu"
+}
+
+###
+GET http://localhost:8080/contacts/JOhN
+
+###
+GET http://localhost:8080/contacts?firstname=john&lastname=smith&email=edward.smith@miu.edu
