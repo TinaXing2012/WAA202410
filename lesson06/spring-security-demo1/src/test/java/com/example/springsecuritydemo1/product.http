@@ -1,0 +1,3 @@
+GET http://localhost:8080/products
+X-Tenant-Id: admin
+Authorization: Basic john@test.com 12345dfdfdfd
