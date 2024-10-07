@@ -39,7 +39,8 @@ public class SpringSecurityConfigDaoAuthenticationProvider {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/users/**").authenticated()
                         .requestMatchers("/products/**").hasAuthority("admin")
-                        .anyRequest().permitAll())
+                        .anyRequest().permitAll()
+                )
 //                .addFilterAfter(new TenantFilter(), AuthorizationFilter.class)
                 .csrf(csrf -> csrf.disable())
                 .build();

@@ -1,6 +1,6 @@
 GET http://localhost:8080/products
 X-Tenant-Id: admin
-Authorization: Basic luck@test.com 12345
+Authorization: Basic jj@test.com abcd
 
 ###
 POST http://localhost:8080/products

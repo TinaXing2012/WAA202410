@@ -1,12 +1,15 @@
 POST http://localhost:8080/users
-Authorization: Basic john@test.com 12345
-X-Tenant-Id: admin
+Authorization: Basic jj@test.com abcd
 Content-Type: application/json
 
 {
-  "firstName": "Lucy",
+  "firstName": "JJ2",
   "lastName": "Jack",
-  "email": "luck@test.com",
-  "password": "$2a$10$zlr5LRos0owH6lQRpT4gxOniOtOvJPlxBu8cwdVWtDzPQ7plpy5c2",
+  "email": "jj2@test.com",
+  "password": "abcd",
   "roles": ["admin", "user"]
 }
+
+###
+GET http://localhost:8080/users
+Authorization: Basic jj@test.com abcd
