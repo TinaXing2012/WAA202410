@@ -1,0 +1,12 @@
+POST http://localhost:8080/users
+Authorization: Basic john@test.com 12345
+X-Tenant-Id: admin
+Content-Type: application/json
+
+{
+  "firstName": "Lucy",
+  "lastName": "Jack",
+  "email": "luck@test.com",
+  "password": "$2a$10$zlr5LRos0owH6lQRpT4gxOniOtOvJPlxBu8cwdVWtDzPQ7plpy5c2",
+  "roles": ["admin", "user"]
+}

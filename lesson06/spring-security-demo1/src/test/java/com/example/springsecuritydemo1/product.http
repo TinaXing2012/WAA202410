@@ -1,3 +1,34 @@
 GET http://localhost:8080/products
 X-Tenant-Id: admin
-Authorization: Basic john@test.com 12345dfdfdfd
+Authorization: Basic luck@test.com 12345
+
+###
+POST http://localhost:8080/products
+Authorization: Basic john@test.com 12345
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "HP",
+  "price": 222
+}
+
+###
+POST http://localhost:8080/users
+X-Tenant-Id: admin
+Authorization: Basic john@test.com 12345
+Content-Type: application/json
+
+{
+  "firstName": "JJ",
+  "lastName": "Tom",
+  "email": "jj@test.com",
+  "password": "$2a$10$zlr5LRos0owH6lQRpT4gxOniOtOvJPlxBu8cwdVWtDzPQ7plpy5c2",
+  "roles": ["user"]
+}
+
+
+###
+GET http://localhost:8080/users
+#X-Tenant-Id: admin
+Authorization: Basic john@test.com 12345
