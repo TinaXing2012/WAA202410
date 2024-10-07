@@ -1,0 +1,16 @@
+POST http://localhost:8080/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyLGVkd2FyZEBtaXUuZWR1LHVzZXIiLCJpYXQiOjE3MjgzMjc2MjAsImV4cCI6MTcyODMyNzgwMCwiaXNzIjoiTUlVIn0.cCFru47kD1wmJUkSISDPKZ2_MJqUkFLytOhLbdCDINA
+
+{
+  "name": "Apple",
+  "price": 229
+}
+
+###
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyLGVkd2FyZEBtaXUuZWR1LHVzZXIiLCJpYXQiOjE3MjgzMjc2MjAsImV4cCI6MTcyODMyNzgwMCwiaXNzIjoiTUlVIn0.cCFru47kD1wmJUkSISDPKZ2_MJqUkFLytOhLbdCDINA
+
+###
+DELETE http://localhost:8080/products/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyLGVkd2FyZEBtaXUuZWR1LHVzZXIiLCJpYXQiOjE3MjgzMjc2MjAsImV4cCI6MTcyODMyNzgwMCwiaXNzIjoiTUlVIn0.cCFru47kD1wmJUkSISDPKZ2_MJqUkFLytOhLbdCDINA
