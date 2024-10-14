@@ -40,12 +40,24 @@ export default function App() {
         setTodos([...filteredTodos]);
     }
 
+    const updateTodosAll = (done: boolean) => {
+       const newTodos = todos.map(todo => {
+            todo.done = done;
+            return todo;
+        });
+       setTodos(newTodos);
+    }
+
+    const deleteFinishedTodo = () => {
+       setTodos(todos.filter(todo => !todo.done));
+    }
+
     return (
         <div className="todo-container">
             <div className="todo-wrap">
                 <Header onAddNewTodo={addNewTodo}/>
                 <List todos={todos} onUpdateTodo={updateTodo} onDeleteTodo={deleteTodo}/>
-                <Footer/>
+                <Footer todos={todos} onUpdateTodosAll={updateTodosAll} onDeleteFinishedTodo={deleteFinishedTodo}/>
             </div>
         </div>
     );
