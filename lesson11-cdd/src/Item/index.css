@@ -32,3 +32,11 @@ li:before {
 li:last-child {
     border-bottom: none;
 }
+
+li .btn-danger {
+    display: none;
+}
+
+li:hover .btn-danger {
+    display: block;
+}

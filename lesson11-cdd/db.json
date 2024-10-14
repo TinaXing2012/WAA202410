@@ -2,15 +2,18 @@
   "todos": [
     {
       "id": 1,
-      "name": "Create a React Project"
+      "name": "Create a React Project",
+      "done": true
     },
     {
       "id": 2,
-      "name": "Copy everything to App.tsx"
+      "name": "Copy everything to App.tsx",
+      "done": false
     },
     {
       "id": 3,
-      "name": "Split into different components"
+      "name": "Split into different components",
+      "done": false
     }
   ]
 }
