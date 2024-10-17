@@ -1,0 +1,21 @@
+{
+  "name": "redux-toolkit-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
+    "redux-logger": "^3.0.6"
+  },
+  "devDependencies": {
+    "@types/redux-logger": "^3.0.13"
+  }
+}
