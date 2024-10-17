@@ -8,6 +8,8 @@ const pizzaReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants_1.PIZZA_ORDER:
             return Object.assign(Object.assign({}, state), { numOfPizza: state.numOfPizza - 1 });
+        case constants_1.PIZZA_RESTOCK:
+            return Object.assign(Object.assign({}, state), { numOfPizza: state.numOfPizza + action.payload });
         default:
             return state;
     }
