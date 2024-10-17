@@ -4,7 +4,7 @@ const initialState = {
     numOfPizza: 10
 }
 
-type ActionType = {
+export type ActionType = {
     type: string;
     payload?: number;
 }
