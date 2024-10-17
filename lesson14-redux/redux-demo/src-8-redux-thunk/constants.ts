@@ -1,0 +1,7 @@
+export const PIZZA_ORDER = 'PIZZA_ORDER';
+export const PIZZA_RESTOCK = 'PIZZA_RESTOCK';
+
+export const CHICKEN_ORDER = 'CHICKEN_ORDER';
+export const CHICKEN_RESTOCK = 'CHICKEN_RESTOCK';
+
+export const UPDATE_STREET = 'UPDATE_STREET';

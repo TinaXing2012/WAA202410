@@ -1,26 +1,25 @@
-import {produce} from "immer";
-import {UPDATE_STREET} from "./constants";
+import {ActionType, User} from "./types";
+import {FETCH_USERS_FAILURE, FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS} from "./constants";
 
-type ActionType = {
-    type: string;
-    payload: string;
+const initialState: {
+    loading: boolean;
+    users: User[];
+    error: string
+} = {
+    loading: false,
+    users: [],
+    error: ''
 }
 
-const initialState = {
-    name: 'John Smith',
-    address: {
-        street: '1000 N 4th St',
-        city: 'Fairfield',
-        state: 'IA'
-    }
-}
-
-const userReducer = (state = initialState, {type, payload}: ActionType) => {
+const userReducer = (state = initialState, action: ActionType) => {
+    const {type, payload} = action;
     switch (type) {
-        case UPDATE_STREET:
-            return produce(state, (draft) => {
-                draft.address.street = payload;
-            });
+        case FETCH_USERS_REQUEST:
+            return {...state, loading: true};
+        case FETCH_USERS_SUCCESS:
+            return {...state, loading: false, users: payload};
+        case FETCH_USERS_FAILURE:
+            return {...state, loading: false, users:[], error: payload}
         default:
             return state;
     }

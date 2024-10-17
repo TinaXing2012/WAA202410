@@ -10,6 +10,8 @@ const chickenReducer = (state = initialState, action) => {
             return Object.assign(Object.assign({}, state), { numOfChicken: state.numOfChicken - 1 });
         case constants_1.CHICKEN_RESTOCK:
             return Object.assign(Object.assign({}, state), { numOfChicken: state.numOfChicken + action.payload });
+        case constants_1.PIZZA_ORDER:
+            return Object.assign(Object.assign({}, state), { numOfChicken: state.numOfChicken - 1 });
         default:
             return state;
     }

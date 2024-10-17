@@ -8,10 +8,10 @@ const unsubscribe = store.subscribe(() => {
 });
 
 store.dispatch(createOrderPizzaAction());
-store.dispatch(createOrderPizzaAction());
-store.dispatch(createRestockPizzaAction(6));
+// store.dispatch(createOrderPizzaAction());
+// store.dispatch(createRestockPizzaAction(6));
 
-store.dispatch(createOrderChickenAction());
-store.dispatch(createRestockChickenAction(9));
+// store.dispatch(createOrderChickenAction());
+// store.dispatch(createRestockChickenAction(9));
 
 unsubscribe();

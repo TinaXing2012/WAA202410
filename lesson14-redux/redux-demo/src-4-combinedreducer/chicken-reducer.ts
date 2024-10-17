@@ -1,4 +1,4 @@
-import {CHICKEN_ORDER, CHICKEN_RESTOCK} from "./constants";
+import {CHICKEN_ORDER, CHICKEN_RESTOCK, PIZZA_ORDER} from "./constants";
 
 type ActionType = {
     type: string;
@@ -15,6 +15,8 @@ const chickenReducer = (state = initialState, action: ActionType) => {
             return {...state, numOfChicken: state.numOfChicken - 1};
         case CHICKEN_RESTOCK:
             return {...state, numOfChicken: state.numOfChicken + action.payload!};
+        case PIZZA_ORDER:
+            return {...state, numOfChicken: state.numOfChicken - 1};
         default:
             return state;
     }

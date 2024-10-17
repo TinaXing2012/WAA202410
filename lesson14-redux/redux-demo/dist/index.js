@@ -9,11 +9,9 @@ console.log('initial state:', store_1.default.getState());
 const unsubscribe = store_1.default.subscribe(() => {
     console.log('updated state: ', store_1.default.getState());
 });
-store_1.default.dispatch((0, pizza_action_1.createOrderPizzaAsyncAction)(2000));
+store_1.default.dispatch((0, pizza_action_1.createOrderPizzaAction)());
 // store.dispatch(createOrderPizzaAction());
 // store.dispatch(createRestockPizzaAction(6));
-//
 // store.dispatch(createOrderChickenAction());
 // store.dispatch(createRestockChickenAction(9));
-// store.dispatch(createUpdateStreetAction('12345 Main st'));
-// unsubscribe();
+unsubscribe();

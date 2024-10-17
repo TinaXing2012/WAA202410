@@ -1,21 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const immer_1 = require("immer");
 const constants_1 = require("./constants");
 const initialState = {
-    name: 'John Smith',
-    address: {
-        street: '1000 N 4th St',
-        city: 'Fairfield',
-        state: 'IA'
-    }
+    loading: false,
+    users: [],
+    error: ''
 };
-const userReducer = (state = initialState, { type, payload }) => {
+const userReducer = (state = initialState, action) => {
+    const { type, payload } = action;
     switch (type) {
-        case constants_1.UPDATE_STREET:
-            return (0, immer_1.produce)(state, (draft) => {
-                draft.address.street = payload;
-            });
+        case constants_1.FETCH_USERS_REQUEST:
+            return Object.assign(Object.assign({}, state), { loading: true });
+        case constants_1.FETCH_USERS_SUCCESS:
+            return Object.assign(Object.assign({}, state), { loading: false, users: payload });
+        case constants_1.FETCH_USERS_FAILURE:
+            return Object.assign(Object.assign({}, state), { loading: false, users: [], error: payload });
         default:
             return state;
     }
